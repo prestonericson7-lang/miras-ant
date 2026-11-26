@@ -53,13 +53,13 @@ As far as the prior work I read goes (listed below), this part is new.
 
 All four diagonals come out near a quarter: 25.13, 25.10, 24.86 and 24.90 percent of the 6 by 6, by the counts in [`SUMMARY.md`](data/census6/SUMMARY.md). Up and down balance to about a hundredth of a percent (50.01 / 49.99). **Right and left don't: 50.24 against 49.76**, about 2,300 times the noise. The centred 5 by 5 is balanced (49.993 / 50.007). **Why the 6 by 6 leans right, I don't know.**
 
-The start isn't forgotten, either. Across the 256 pieces (each one a setting of the eight cells behind the ant), one direction's share runs from 20.9 to 36.7 percent. Black cells behind the ant mostly send the road away from them. The pieces with longer tangles sit a little closer to a quarter, so the steering fades with time, but only a little.
+The start isn't forgotten, either. Across the 256 pieces (each one a setting of the eight cells behind the ant), one direction's share runs from 20.9 to 36.7 percent. Black cells behind the ant mostly send the road away from them. The pieces with longer tangles sit a little closer to a quarter (a correlation of -0.28 across the pieces), which hints that the steering fades with time, but only a little; whether it does for each start needs the per-start data (see *What's still missing*).
 
 ![The cells behind the ant](figures/the_cells_behind_the_ant.png)
 
 ## The mess itself, and two hearts
 
-Over sampled 6 by 6 starts, the visited cells grow as about *t*^0.745 and the radius as *t*^0.375. The mess is a solid disk with a ragged coastline (dimension 1.99), keeping its shape as it grows until the longest tangles round out. Most of the ant's new ground comes in its own bays rather than on the open frontier.
+Over sampled 6 by 6 starts, the visited cells grow as about *t*^0.745 and the radius as *t*^0.375, so the cells grow as the radius to the power 1.99: the mess fills its disk. Its coastline is rough (its rim grows as about the radius to the power 1.19), and the outline keeps its shape as it grows until the longest tangles round out. Most of the ant's new ground comes in its own bays rather than on the open frontier.
 
 And because it's my census, I looked for hearts. Among 890,911 moments of 50,000 tangles, the best was start `b17da4d67` at step 11,520. The little one, `479530680`, is a heart at step 256 and a blob by step 340 (the animation above). Hearts are brief.
 
@@ -67,7 +67,7 @@ And because it's my census, I looked for hearts. Among 890,911 moments of 50,000
 
 ## Predictions, filed before the runs
 
-Every number above had a prediction written down before the run that measured it. The ones that matter most here:
+The main numbers above had a prediction written down before the run that measured them. The ones that matter most here:
 
 | | Prediction | Result |
 |---|---|---|
@@ -105,7 +105,7 @@ I found nothing in what I read on how the road is *entered*: the approaches, the
 3. **Where the main door settles.** 15.04, 16.56, 16.95, 17.48 percent, and still rising. A fair sample of a 7 by 7 box would show the next step.
 4. **The other 6 by 6.** An independent count of the placement in pull request 613, every start, so both boxes are checked twice.
 5. **The 7 by 7 box.** That's 2^49 starts, about 563 trillion. At this census's rate of about 234,000 starts a second, brute force would take about 76 years (an estimate). It needs a smarter count: one that branches only when the ant first steps on a cell it hasn't read yet, so starts that agree on every cell the ant touches share their work. That's an idea, not yet measured.
-6. **The full prediction ledger.** 57 predictions are filed and graded. The public copy waits until it's cleaned of my private working notes.
+6. **The full prediction ledger.** 70 predictions were filed before their runs, and at least 60 of them are graded so far; the rest wait on runs not yet done. The public copy waits until it's cleaned of my private working notes.
 7. **The conjecture itself** stays open. A census is evidence, not a proof.
 
 ## Check it yourself
