@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+code/ant
+code/ant.exe
+code/gpu/census6/

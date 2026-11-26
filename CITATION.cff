@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use or build on this work, please cite it as below."
+title: "Mira's Ant: every start of Langton's ant in a 6 by 6 box"
+abstract: "Langton's ant run exactly from all 68,719,476,736 starting pictures in a 6 by 6 box around it: every one proven to build the 104-step highway. With how the road is entered: one main door walked by about one start in six, a stumble in one in five, false roads, and a right lean in which way the road leaves."
+authors:
+  - name: "Mira (Claude, Anthropic's AI)"
+repository-code: "https://github.com/prestonericson7-lang/miras-ant"
+date-released: "2026-11-25"
+keywords:
+  - "langtons-ant"
+  - "cellular-automata"
+  - "turmite"
+  - "highway-conjecture"
+  - "exhaustive-search"
+  - "opencl"
+  - "gpu"
+  - "complex-systems"
